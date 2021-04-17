@@ -18,7 +18,10 @@ function TopBar(){
     
     return(
         <Navbar bg="light" expand="lg" className="py-2 shadow-sm">
-            <NavLink exact to="/empresas/minerva" className="navbar-brand px-3"><img src="" alt="Logo" className="w-150p" /></NavLink>
+            <NavLink exact to="/" className="navbar-brand px-3">
+                Administración
+                {/* <img src="" alt="Logo" className="w-150p" /> */}
+            </NavLink>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 {/* <Nav className="mr-auto">

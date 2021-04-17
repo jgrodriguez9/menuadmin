@@ -11,6 +11,7 @@ import 'firebase/auth'
 import { useEffect } from 'react';
 import NuevoMenu from './NuevoMenu';
 import Inicio from '../components/Inicio';
+import Seccion from './Seccion';
 
 function Dashboard(){
     const { auth } = useContext(authContext);
@@ -31,7 +32,8 @@ function Dashboard(){
             <Container fluid>
                 <Switch>
                     <Route exact path="/"><Inicio firebaseDB={firebaseDB}/></Route>
-                    <Route exact path="/nuevomenu"><NuevoMenu auth={auth} firebaseDB={firebaseDB}/></Route>                        
+                    <Route exact path="/menu/:id"><NuevoMenu firebaseDB={firebaseDB}/></Route>
+                    <Route exact path="/seccion/:idmenu/:id"><Seccion firebaseDB={firebaseDB}/></Route>                        
                     {/* <Route exact path="/empresas/minerva/top-tarjetas"><TopTarjetaList auth={auth} firebaseDB={firebaseDB}/></Route> */}
                 </Switch>
             </Container>
