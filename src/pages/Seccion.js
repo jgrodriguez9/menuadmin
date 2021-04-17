@@ -28,6 +28,7 @@ export default function Seccion({firebaseDB}){
         name_en: '',
         active: true,
         orden: 0,
+        observacion: ''
     })
     //console.log(initialValues.id)
     const [textoLoading, setTextoLoading] = useState("Cargando")
@@ -66,7 +67,8 @@ export default function Seccion({firebaseDB}){
                         name_en: section.name_en,
                         active: section.active,
                         orden: section.orden,
-                        productos: section.productos
+                        productos: section.productos,
+                        observacion: section.observacion
                     }
                     setProduct(obj.productos)
                     setInitialValues(obj)
@@ -127,9 +129,10 @@ export default function Seccion({firebaseDB}){
                                     name_en: values.name_en,
                                     active: values.active,
                                     orden: values.orden,
+                                    observacion: values.observacion,
                                     productos: product
                                 }  
-                                //console.log(sec)
+                                console.log(sec)
                                 
                                 
                                 //buscamos la section que estamos actualizando
