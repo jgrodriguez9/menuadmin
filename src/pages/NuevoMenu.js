@@ -14,10 +14,10 @@ export default function NuevoMenu({auth, firebaseDB}){
     const [loading, setLoading] = useState(false)
     const [loadingData, setLoadingData] = useState(true)
     const shemaValidate = Yup.object().shape({
-        name_es: Yup.string()
-            .required('Campo Requerido'),
-        name_en: Yup.string()
-            .required('Campo Requerido'),
+        // name_es: Yup.string()
+        //     .required('Campo Requerido'),
+        // name_en: Yup.string()
+        //     .required('Campo Requerido'),
         orden: Yup.number()
             .min(0, "Campo permitido para mayores o iguales a cero")
             .required('Campo Requerido'),

@@ -36,6 +36,7 @@ export default function CardMenu({item, onHandleDeleteSection}){
                                                     <span 
                                                         className="text-danger cursor-pointer"
                                                         onClick={e=>onHandleDeleteSection(i, item.id)}
+                                                        data-testid="test"
                                                     ><FaTimesCircle /></span>
                                                 </div>                                                
                                             </div>
